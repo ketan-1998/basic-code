@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="bg-green-600 flex justify-center pt-[50px] w-screen h-screen">
+        <div class="flex gap-2 flex-col">
+            <h1 class="w-[400px] bg-slate-700 font-mono text-center capitalize rounded text-slate-100 text-xl">my-todo
+            </h1>
+            <div class="w-[400px] bg-slate-700 font-mono text-center capitalize rounded text-slate-100 text-xl">
+                <div class="flex py-1 justify-center gap-4">
+                    <img src="./icons/add-file.png" alt="" class="w-[35px]" title="create a list" id="create-list">
+                    <img src="./icons/removed.png" alt="" class="w-[35px]" title="delete a list" id="del-all-list">
+                    <!-- <img src="./icons/pen.png" alt="" class="w-[35px]" title="rename a list"> -->
+                </div>
+            </div>
+            <div class="flex flex-col  bg-red-500 gap-2 p-2">
+                <p id="pop-box-text"
+                    class="bg-slate-700 self-start px-3 font-mono text-center capitalize rounded text-slate-100 text-[15px] ">
+                    add new list </p>
+                <div class="flex items-center justify-evenly">
+                    <input id="message" type="text" class="border-none outline-none text-[18px] px-1 font-mono rounded">
+                    <button class="bg-slate-900 px-8 py-1 rounded" id="add-btn">
+                        <img src="./icons/pen.png" alt="" class="w-[20px]">
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-2" id="list-box">
+            </div>
+        </div>
+        <script src="app.js"></script>
+</body>
+
+</html>
