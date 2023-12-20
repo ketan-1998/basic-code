@@ -1,59 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>todo</title>
-    <link rel="stylesheet" href="main.css">
-</head>
-
-<body>
-    <div class="bg-red-500 w-screen min-h-screen py-[100px] select-none">
-        <div class="bg-slate-700  w-[65%] mx-auto rounded p-3 space-y-2">
-
-            <!-- main heading box -->
-            <div class="bg-green-400 font-mono text-slate-900 rounded gap-3 capitalize justify-center py-1 flex">
-                <span class="text-slate-900">my_todo</span>
-                <img src="./icons/add-file.png" class="w-[20px]" alt="">
-            </div>
-
-            <!-- add todo list -->
-            <div class="flex flex-col gap-2 bg-stone-500 p-2">
-                <div class="flex gap-2 bg-slate-800 justify-start px-3 py-1 text-slate-400 self-start rounded">
-                    <h2>add new todo list</h2>
-                    <img src="./icons/pen.png" class="w-[20px]" alt="">
-                </div>
-                <div class="bg-slate-800 self-end w-10/12 p-1 px-4 rounded flex gap-2">
-                    <input id="listName" type="text"
-                        class="border-none outline-none w-10/12 rounded bg-slate-300  font-mono text-slate-900 px-2 items-center">
-                    <button id="createBtn"
-                        class="bg-red-500 hover:bg-red-700 capitalize text-slate-900 rounded font-semibold font-mono px-6 flex items-center gap-2 py-[2px]">
-                        <span>add</span>
-                        <img src="./icons/pen.png" class="w-[20px]" alt="">
-                    </button>
-                    <button id="cancelBtn"
-                        class="bg-red-500 hover:bg-red-700 capitalize text-slate-900 rounded font-semibold font-mono px-6  gap-2 py-[2px] flex items-center">
-                        <span>cancel</span>
-                        <img src="./icons/cancel.png" class="w-[20px]" alt="">
-                    </button>
-                </div>
-                <div class="bg-slate-700 py-1 rounded-sm">
-                    <button id="deleteBtn" class="flex bg-slate-400 rounded-sm hover:bg-slate-900  px-3 py-1 mx-auto text-slate-900 hover:text-slate-200 capitalize gap-2">
-                        <span>
-                            delete all list
-                        </span>
-                        <img src="./icons/removed.png" alt="" class="w-[20px]">
-                    </button>
-                </div>
-            </div>
-
-            <!-- main box -->
-            <div id="listBox" class="bg-green-500 space-y-2 justify-center py-2 flex gap-3 flex-wrap">
-            </div>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body
+    class="bg-slate-800 w-screen min-h-screen flex justify-center items-center select-none"
+  >
+    <div class="bg-red-500 flex flex-col gap-5 p-5 rounded-sm w-10/12">
+      <!-- todo main heading box -->
+      <div
+        class="flex justify-center gap-1 items-center bg-slate-500 px-3 rounded-sm capitalize py-1 font-mono font-semibold text-slate-900 text-[18px]"
+      >
+        <h1>my_todo</h1>
+        <img src="./icons/add-file.png" class="w-[20px]" alt="" />
+      </div>
+      <!-- todo  name enter box -->
+      <div class="bg-slate-500 px-5 py-2 flex flex-col gap-5 self-center">
+        <h1
+          class="bg-red-500 self-start px-4 rounded py-1 text-[18px] text-slate-900 font-mono font-semibold capitalize"
+        >
+          enter new todo name
+        </h1>
+        <div
+          class="bg-red-500 flex gap-10 px-4 py-2 text-[18px] text-slate-900 font-mono font-semibold items-center"
+        >
+          <input
+            type="text"
+            name=""
+            id="newTodoName"
+            class="focus border-none outline-none px-2 capitalize rounded"
+          />
+          <div class="bg-slate-900 text-slate-300 px-4 py-1 flex gap-2">
+            <button
+              id="createNewTodo"
+              class="bg-slate-500 px-4 rounded text-slate-900 capitalize flex items-center gap-1 active:bg-slate-900 active:scale-90 active:text-slate-300"
+            >
+              <span>add</span>
+              <img src="./icons/pen.png" class="w-[20px]" alt="" />
+            </button>
+            <button
+              id="cancel"
+              class="bg-slate-500 px-4 rounded text-slate-900 capitalize flex items-center gap-1 active:bg-slate-900 active:scale-90 active:text-slate-300"
+            >
+              <span>cancel</span>
+              <img src="./icons/cancel.png" class="w-[20px]" alt="" />
+            </button>
+          </div>
         </div>
+        <button
+          id="deleteAllTodo"
+          class="bg-slate-900 px-4 rounded font-semibold font-mono text-slate-200 capitalize active:bg-slate-700 active:scale-90 active:text-slate-900 py-2 flex gap-2 items-center justify-center"
+        >
+          <span>delete all todo</span>
+          <img src="./icons/delete.png" class="w-[20px]" alt="" />
+        </button>
+      </div>
+      <!-- todo box -->
+      <div
+        id="todoBox"
+        class="bg-slate-500 px-5 py-2 flex justify-center flex-wrap gap-2"
+      >
+       
+      </div>
     </div>
     <script src="app.js"></script>
-</body>
-
+  </body>
 </html>
